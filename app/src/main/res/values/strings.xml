@@ -45,8 +45,6 @@
     <string name="manage_app_permissions">View and manage permissions required by the app</string>
     <string name="passwords_don_t_match">Passwords don\'t match</string>
     <string name="gcp_id">69074903886-deur7bivjo9f5g8c51j27mifm94qit3u.apps.googleusercontent.com</string>
-<!--    <string name="paypal_sandbox_email">sb-9guev27300545@business.example.com</string>-->
-<!--    <string name="paypal_sandbox_password">TmaW>C6g</string>-->
     <string name="hi">Hi!\n%1$s</string>
     <string name="details">Details</string>
     <string name="season">Season %1$s</string>
