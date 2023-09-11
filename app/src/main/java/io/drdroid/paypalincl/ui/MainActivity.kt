@@ -21,6 +21,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
@@ -226,9 +227,9 @@ class MainActivity : ComponentActivity() {
                                     navController = navController,
                                     navActions = navigationActions,
                                     onColorChanged = {
-                                        statusColor = Color(it.dominantSwatch?.rgb!!)
-                                        navigationColor = Color(it.dominantSwatch?.rgb!!)
-                                        backColor = Color(it.darkVibrantSwatch?.rgb!!)
+                                        statusColor = Color(it.dominantSwatch?.rgb?: statusColor.toArgb())
+                                        navigationColor = Color(it.dominantSwatch?.rgb?: navigationColor.toArgb())
+                                        backColor = Color(it.darkVibrantSwatch?.rgb?: backColor.toArgb())
                                     }
                                 )
                             }
