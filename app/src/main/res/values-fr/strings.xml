@@ -54,4 +54,19 @@
     <string name="thank_you">Merci de votre aide!</string>
     <string name="operation_canceled">Operation Annulée</string>
     <string name="an_error_occurred">Une erreur s\'est produite. Veuillez réessayer plus tard.</string>
+
+    <string name="update_profile_picture">Mettre à jour la photo de profil</string>
+    <string name="update_profile_picture_from_gallery_or_using_camera">Vous pouvez changer la photo de profil à partir de la gallerie ou prendre une photo.</string>
+    <string name="camera">Appareil Photo</string>
+    <string name="gallery">Gallerie</string>
+    <string name="couldn_t_find_a_camera_application">Impossible de trouver une application pour prendre des photos</string>
+    <string name="media_access_permission_needed">Permission pour Accéder au Médias Requis</string>
+<!--    <string name="feature_requires_access_to_media">Cette option a besoin d\'accéder aux médias.</string>-->
+    <string name="update_display_picture">Update display picture</string>
+    <string name="update_display_picture_from_gallery_or_using_camera">You can update the display picture by choosing a picture from the gallery or by using the camera.</string>
+    <string name="camera_permission_needed">Accès à l\'Appareil Photo Requis</string>
+<!--    <string name="camera_permission_message">Cette option a besoin d\'accéder à l'appareil photo.</string>-->
+    <string name="permission_not_granted">Non Autorisé</string>
+    <string name="update">Mettre à Jour</string>
+    <string name="apply_profile_update">Changements détectés. Appliquer?</string>
 </resources>

@@ -66,4 +66,6 @@
     <string name="camera_permission_needed">Camera Permission Needed</string>
     <string name="camera_permission_message">This feature requires you to grant Camera Permission.</string>
     <string name="permission_not_granted">Permission Not Granted</string>
+    <string name="update">Update</string>
+    <string name="apply_profile_update">Profile updated. Apply changes?</string>
 </resources>

@@ -226,16 +226,8 @@ fun SelectImageButton(
             } else {
                 Icons.Filled.Folder
             },
-            title = if (profile) {
-                stringResource(R.string.update_profile_picture)
-            } else {
-                stringResource(id = R.string.update_display_picture)
-            },
-            message = if (profile) {
-                stringResource(R.string.update_profile_picture_from_gallery_or_using_camera)
-            } else {
-                stringResource(id = R.string.update_display_picture_from_gallery_or_using_camera)
-            },
+            title = stringResource(R.string.update_profile_picture),
+            message = stringResource(R.string.update_profile_picture_from_gallery_or_using_camera),
             cancellable = true,
             positiveText = stringResource(R.string.camera),
             negativeText = stringResource(R.string.gallery),
@@ -281,8 +273,8 @@ fun SelectImageButton(
 
     OutlinedButton(
         colors = ButtonDefaults.outlinedButtonColors(
-//            containerColor = Color.White,
-//            disabledContainerColor = Color.White,
+            containerColor = Color.White,
+            disabledContainerColor = Color.White,
             contentColor = PrimaryDark,
             disabledContentColor = PrimaryDark,
         ),

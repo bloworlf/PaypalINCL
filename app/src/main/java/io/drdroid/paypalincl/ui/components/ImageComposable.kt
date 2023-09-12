@@ -88,6 +88,7 @@ fun ProfileImage(
                 modifier = Modifier
                     .fillMaxHeight()
 //                    .size(128.dp)
+                    .aspectRatio(1f)
                     .clip(CircleShape)                       // clip to the circle shape
                     .border(2.dp, Color.Gray, CircleShape)   // add a border (optional)
             )
@@ -97,6 +98,7 @@ fun ProfileImage(
                 modifier = Modifier
 //                    .size(128.dp)
                     .fillMaxHeight()
+                    .aspectRatio(1f)
                     .clip(CircleShape)
                     .border(2.dp, Color.Gray, CircleShape),
                 component = rememberImageComponent {
