@@ -53,4 +53,17 @@
     <string name="thank_you">Thank you for your help!</string>
     <string name="operation_canceled">Operation Canceled</string>
     <string name="an_error_occurred">An error occurred. Try again later.</string>
+
+    <string name="update_profile_picture">Update Profile picture</string>
+    <string name="update_profile_picture_from_gallery_or_using_camera">You can update your profile picture by choosing a picture from the gallery or by using the camera.</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="couldn_t_find_a_camera_application">Couldn\'t find a Camera application</string>
+    <string name="media_access_permission_needed">Media Access Permission Needed</string>
+    <string name="feature_requires_access_to_media">This feature requires you to grant Access to Media.</string>
+    <string name="update_display_picture">Update display picture</string>
+    <string name="update_display_picture_from_gallery_or_using_camera">You can update the display picture by choosing a picture from the gallery or by using the camera.</string>
+    <string name="camera_permission_needed">Camera Permission Needed</string>
+    <string name="camera_permission_message">This feature requires you to grant Camera Permission.</string>
+    <string name="permission_not_granted">Permission Not Granted</string>
 </resources>

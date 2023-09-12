@@ -1,5 +1,6 @@
 package io.drdroid.paypalincl.ui.components
 
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -30,6 +31,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.palette.graphics.Palette
@@ -49,13 +51,12 @@ import io.drdroid.paypalincl.ui.theme.PaypalINCLTheme
 @Composable
 fun ProfileImage(
     modifier: Modifier = Modifier,
-//    context: Context,
     imgUrl: String?,
     onClicked: () -> Unit,
-//    updatable: Boolean = false,
-//    onImageSelected: (Uri) -> Unit = {}
+    updatable: Boolean = false,
+    onImageSelected: (Uri) -> Unit = {}
 ) {
-
+    val context = LocalContext.current
     var imageState by remember { mutableStateOf(imgUrl) }
 
 //    var localToggleState by remember { mutableStateOf(FullScreenState.Inactive) }
@@ -75,6 +76,7 @@ fun ProfileImage(
         modifier = modifier
             .clickable {
                 onClicked.invoke()
+//                localToggleState = FullScreenState.Active
             },
         contentAlignment = Alignment.Center
     ) {
@@ -112,17 +114,17 @@ fun ProfileImage(
             )
         }
 
-//        if (updatable) {
-//            SelectImageButton(
-//                modifier = Modifier
-//                    .align(Alignment.BottomCenter),
-//                context = context,
-//                onImageSelected = {
-//                    imageState = it.toString()
-//                    onImageSelected(it)
-//                }
-//            )
-//        }
+        if (updatable) {
+            SelectImageButton(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter),
+                context = context,
+                onImageSelected = {
+                    imageState = it.toString()
+                    onImageSelected(it)
+                }
+            )
+        }
     }
 }
 

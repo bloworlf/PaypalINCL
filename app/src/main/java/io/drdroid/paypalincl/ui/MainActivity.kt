@@ -169,6 +169,15 @@ class MainActivity : ComponentActivity() {
                                     backColor = Color(0xFF009CDE)
                                 }
 
+                                Screen.Profile.route,
+                                -> {
+                                    displayAppBar = true
+                                    displayBottomBar = false
+                                    statusColor = Color.White
+                                    navigationColor = Color.White
+                                    backColor = Color.White
+                                }
+
                                 "${Screen.Details.route}/{show}" -> {
                                     displayAppBar = true
                                     displayBottomBar = false

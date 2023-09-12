@@ -6,6 +6,7 @@ import androidx.compose.material.icons.filled.AttachMoney
 import androidx.compose.material.icons.filled.Details
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Key
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
@@ -17,6 +18,7 @@ import java.nio.charset.StandardCharsets
 
 object Destinations {
 
+    const val PROFILE = "Profile"
     const val DETAILS = "Details"
     const val SETTINGS = "Settings"
     const val DONATE = "Donate"
@@ -39,6 +41,7 @@ sealed class Screen(val route: String, @StringRes val resourceId: Int, val icon:
     object Donate : Screen(Destinations.DONATE, R.string.donate, Icons.Filled.AttachMoney)
     object Settings : Screen(Destinations.SETTINGS, R.string.settings, Icons.Filled.Settings)
     object Details : Screen(Destinations.DETAILS, R.string.details, Icons.Filled.Details)
+    object Profile : Screen(Destinations.PROFILE, R.string.profile, Icons.Filled.Person)
 }
 
 class AppNavigationActions(private val navController: NavHostController) {

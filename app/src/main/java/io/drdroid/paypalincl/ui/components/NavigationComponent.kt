@@ -89,6 +89,7 @@ import io.drdroid.paypalincl.ui.pages.details.DetailScreen
 import io.drdroid.paypalincl.ui.pages.donate.DonateScreen
 import io.drdroid.paypalincl.ui.pages.home.HomeScreen
 import io.drdroid.paypalincl.ui.pages.login.LoginRegisterScreen
+import io.drdroid.paypalincl.ui.pages.profile.ProfileScreen
 import io.drdroid.paypalincl.ui.pages.search.SearchScreen
 import io.drdroid.paypalincl.ui.pages.settings.SettingsScreen
 import io.drdroid.paypalincl.ui.pages.splash.SplashScreen
@@ -120,6 +121,7 @@ fun AppBar(
 
         Screen.Donate.route,
         Screen.Settings.route,
+        Screen.Profile.route,
         "${Screen.Details.route}/{show}",
         -> {
             true
@@ -137,6 +139,7 @@ fun AppBar(
 
         Screen.Donate.route,
         Screen.Settings.route,
+        Screen.Profile.route,
         "${Screen.Details.route}/{show}",
         -> {
             false
@@ -158,6 +161,10 @@ fun AppBar(
 
         Screen.Settings.route -> {
             stringResource(id = Screen.Settings.resourceId)
+        }
+
+        Screen.Profile.route -> {
+            stringResource(id = Screen.Profile.resourceId)
         }
 
         "${Screen.Details.route}/{show}" -> {
@@ -314,7 +321,10 @@ fun MenuDialog(
                         .scale(1f)
                         .clip(shape = CircleShape),
                     imgUrl = userViewModel.currentUser?.photoUrl.toString(),
-                    onClicked = {}
+                    onClicked = {
+                        onNavigate.invoke(Screen.Profile.route)
+                        onClose.invoke()
+                    }
                 )
                 Column(modifier = Modifier.weight(8f)) {
                     Text(text = userViewModel.currentUser?.displayName!!)
@@ -677,7 +687,7 @@ fun AppNavigation(
                     }
                 )
             ) { navBackStackEntry ->
-                val sh = navBackStackEntry.arguments?.getString("show")?.replace("+"," ")
+                val sh = navBackStackEntry.arguments?.getString("show")?.replace("+", " ")
                 sh?.let { str ->
                     val pre = "show="
                     var value = str
@@ -695,6 +705,10 @@ fun AppNavigation(
                     )
 //                    }
                 }
+            }
+
+            horizontalSlideComposable(route = Screen.Profile.route) {
+                ProfileScreen()
             }
         }
     )
